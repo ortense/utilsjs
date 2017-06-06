@@ -1,0 +1,25 @@
+{
+  "name": "api-share-libs",
+  "version": "1.0.0",
+  "description": "api-share-lib my micro services",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astesio/api-share-libs.git"
+  },
+  "keywords": [
+    "microservices",
+    "api",
+    "share",
+    "libs"
+  ],
+  "author": "Astésio <astesiojose@gmail.com> (https://github.com/astesio)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astesio/api-share-libs/issues"
+  },
+  "homepage": "https://github.com/astesio/api-share-libs#readme"
+}
