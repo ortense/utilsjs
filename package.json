@@ -1,5 +1,5 @@
 {
-  "name": "api-share-libs",
+  "name": "utils",
   "version": "1.0.0",
   "description": "api-share-lib my micro services",
   "main": "src/index.js",
