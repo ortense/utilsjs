@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/astesio/api-share-libs/issues"
   },
-  "homepage": "https://github.com/astesio/api-share-libs#readme"
+  "homepage": "https://github.com/astesio/api-share-libs#readme",
+  "dependencies": {}
 }
