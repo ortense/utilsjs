@@ -1,0 +1,16 @@
+{
+  "name": "api-share-libs",
+  "version": "1.0.0",
+  "dependencies": {
+    "unique-random": {
+      "version": "1.0.0",
+      "from": "unique-random@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/unique-random/-/unique-random-1.0.0.tgz"
+    },
+    "unique-random-array": {
+      "version": "1.0.0",
+      "from": "unique-random-array@latest",
+      "resolved": "https://registry.npmjs.org/unique-random-array/-/unique-random-array-1.0.0.tgz"
+    }
+  }
+}
