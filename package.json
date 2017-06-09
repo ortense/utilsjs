@@ -21,9 +21,9 @@
   "author": "Astésio <astesiojose@gmail.com> (https://github.com/astesio)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/astesio/api-share-libs/issues"
+    "url": "https://github.com/astesio/utilsjs/issues"
   },
-  "homepage": "https://github.com/astesio/api-share-libs#readme",
+  "homepage": "https://github.com/astesio/utilsjs#readme",
   "dependencies": {},
   "devDependencies": {
     "chai": "4.0.2",
