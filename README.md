@@ -31,7 +31,7 @@ Javascirpt has a commiter that homologates its functionalities and once homologa
 * isEmpty
 
 ###### Number
-* isEmpty
+* isNumber `return a boolean true when you pass a number, string number or string empty`
 
 ###### Object
 * isEmpty

@@ -20,4 +20,4 @@ const string = {
     }
 };
 
-module.exports = Object.assign({}, {string});
+module.exports = Object.assign({}, string);
