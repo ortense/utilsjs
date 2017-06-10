@@ -5,27 +5,30 @@ const utils = require('../index');
 
 describe('string', () => {
     
-    describe('isValidEmail', () => {
-
-        it('should return a boolean false for a string empty', () => {
-
-            expect(utils.string.isValidEmail('')).to.be.false;
-        });
+    describe('isValidEmail, isEmpty, isNotEmpty', () => {
 
         it('should return a boolean false for a string with one or more space empty', () => {
 
             expect(utils.string.isValidEmail(' ')).to.be.false;
             expect(utils.string.isValidEmail('  ')).to.be.false;
-        });
-
-        it('should return a boolean false for a number', () => {
-
-            expect(utils.string.isValidEmail(10)).to.be.false;
+            expect(utils.string.isEmpty(' ')).to.be.false;
+            expect(utils.string.isEmpty('  ')).to.be.false;
         });
 
         it('should return a boolean false for a NaN', () => {
 
             expect(utils.string.isValidEmail(NaN)).to.be.false;
+            expect(utils.string.isEmpty(NaN)).to.be.false;
+    
+        });
+
+    });
+    
+    describe('isValidEmail', () => {
+
+        it('should return a boolean false for a number', () => {
+
+            expect(utils.string.isValidEmail(10)).to.be.false;
         });
 
         it('should return a boolean false for an undefined', () => {
@@ -52,20 +55,9 @@ describe('string', () => {
             expect(utils.string.isEmpty('')).to.be.true;
         });
 
-        it('should return a boolean false for a string with one or more space empty', () => {
-
-            expect(utils.string.isEmpty(' ')).to.be.false;
-            expect(utils.string.isEmpty('  ')).to.be.false;
-        });
-
         it('should return a boolean false for an undefined', () => {
 
             expect(utils.string.isEmpty()).to.be.false;
-        });
-
-        it('should return a boolean false for an NaN', () => {
-
-            expect(utils.string.isEmpty(NaN)).to.be.false;
         });
 
     });
