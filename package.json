@@ -1,6 +1,6 @@
 {
   "name": "utilsjs",
-  "version": "0.0.1-development",
+  "version": "0.0.0-semantic-released",
   "description": "api-share-lib my micro services",
   "main": "src/index.js",
   "scripts": {
