@@ -12,6 +12,11 @@ const string = {
         
         const regexp = /./;
         return !regexp.test(string);
+    },
+    
+    isNotEmpty: function (string) {
+        
+        return !this.isEmpty(string);
     }
 };
 
