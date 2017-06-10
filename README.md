@@ -7,12 +7,6 @@
 [![downloads](https://img.shields.io/npm/dm/utilsjs.svg?style=flat-square)](https://www.npmjs.com/package/utilsjs)
 [![MIT License](https://img.shields.io/npm/l/utilsjs.svg?style=flat-square)](https://www.npmjs.com/package/utilsjs)
 
-[![NPM version](http://img.shields.io/npm/v/generator-scaffold.svg?style=flat)](http://npmjs.org/generator-scaffold)
-[![NPM downloads](http://img.shields.io/npm/dm/generator-scaffold.svg?style=flat)](http://npmjs.org/generator-scaffold)
-[![License Tyoe](http://img.shields.io/npm/l/generator-scaffold.svg?style=flat)](http://npmjs.org/generator-scaffold)
-[![Dependency Status](http://img.shields.io/david/marcosmoura/generator-scaffold.svg?style=flat)](https://david-dm.org/marcosmoura/generator-scaffold)
-[![Build Status](http://img.shields.io/travis/marcosmoura/generator-scaffold/master.svg?style=flat)](https://travis-ci.org/marcosmoura/generator-scaffold)
-
 ## Introduction
 
 This project was born with the intention of solving code duplication problems between my microservices. I could have solved these problems in several ways without having to open this project, but I decided to leave it open because I imagine that other people should have the same problems. So I created a very simple open source project.
