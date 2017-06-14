@@ -22,24 +22,26 @@ Javascirpt has a commiter that homologates its functionalities and once homologa
 ## Features
 
 ###### Array
-* isValidEmail
+* Don't function yet :(
 
 ###### Boolean
-* isEmpty
+*  Don't function yet :(
 
 ###### Date
-* isEmpty
+*  Don't function yet :(
 
 ###### Number
 * isNumber `return a boolean true when you pass a number, string number or string empty`
 
 ###### Object
-* isEmpty
+*  Don't function yet :(
 
 ###### String
 * isEmpty `return a boolean true if a string is empty`
 * isNotEmpty `otherwise isEmpty return a boolean true if string not empty`
 * isValidEmail `return a boolean true if an email is valid`
+* isValidUserName `return a boolean true if an username is valid`
+* isValidPassword `return a boolean true if an password is valid`
 
 
 ## Getting Started

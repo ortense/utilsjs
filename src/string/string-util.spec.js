@@ -5,96 +5,95 @@ const utilsjs = require('../index');
 
 describe('string', () => {
 
-    describe('isValidEmail, isEmpty, isNotEmpty', () => {
+    describe('isEmpty, isNotEmpty, isValidEmail', () => {
 
-        it('should return a boolean false for a string with one or more space empty', () => {
+        it('should return a boolean true for a string empty', () => {
 
-            expect(utilsjs.string.isValidEmail(' ')).to.be.false;
-            expect(utilsjs.string.isValidEmail('  ')).to.be.false;
+            expect(utilsjs.string.isEmpty('')).to.be.true;
+        });
+    
+        it('should return a boolean false when don\'t pass parameters', () => {
+        
+            expect(utilsjs.string.isEmpty()).to.be.false;
+            // expect(utilsjs.string.isNotEmpty()).to.be.false;
+            expect(utilsjs.string.isValidEmail()).to.be.false;
+            // expect(utilsjs.string.isValidUserName()).to.be.false;
+        });
+        
+        it('should return a boolean false when pass any characters', () => {
+            
+            expect(utilsjs.string.isEmpty('should return false')).to.be.false;
             expect(utilsjs.string.isEmpty(' ')).to.be.false;
             expect(utilsjs.string.isEmpty('  ')).to.be.false;
-        });
-
-        it('should return a boolean false for a NaN', () => {
-
-            expect(utilsjs.string.isValidEmail(NaN)).to.be.false;
+            expect(utilsjs.string.isEmpty(10)).to.be.false;
+            expect(utilsjs.string.isEmpty(true)).to.be.false;
+            expect(utilsjs.string.isEmpty(false)).to.be.false;
+            expect(utilsjs.string.isEmpty(null)).to.be.false;
             expect(utilsjs.string.isEmpty(NaN)).to.be.false;
+            expect(utilsjs.string.isEmpty(undefined)).to.be.false;
+            expect(utilsjs.string.isEmpty({})).to.be.false;
+            // expect(utilsjs.string.isNotEmpty([])).to.be.false;
+            expect(utilsjs.string.isEmpty(Number)).to.be.false;
+            expect(utilsjs.string.isEmpty(Float32Array)).to.be.false;
+            expect(utilsjs.string.isEmpty(Float64Array)).to.be.false;
         });
-
+        
+        it('should return a boolean true when pass any characters', () => {
+            
+            expect(utilsjs.string.isNotEmpty('should return true')).to.be.true;
+            expect(utilsjs.string.isNotEmpty(' ')).to.be.true;
+            expect(utilsjs.string.isNotEmpty('  ')).to.be.true;
+            expect(utilsjs.string.isNotEmpty(10)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(true)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(false)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(null)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(NaN)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(undefined)).to.be.true;
+            expect(utilsjs.string.isNotEmpty({})).to.be.true;
+            // expect(utilsjs.string.isNotEmpty([])).to.be.true;
+            expect(utilsjs.string.isNotEmpty(Number)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(Float32Array)).to.be.true;
+            expect(utilsjs.string.isNotEmpty(Float64Array)).to.be.true;
+        });
+        
     });
     
     describe('isValidEmail', () => {
 
-        it('should return a boolean false for a number', () => {
-
-            expect(utilsjs.string.isValidEmail(10)).to.be.false;
-        });
-
-        it('should return a boolean false for an undefined', () => {
-
-            expect(utilsjs.string.isValidEmail(undefined)).to.be.false;
-        });
-
         it('should return a boolean false for an email invalid', () => {
 
             expect(utilsjs.string.isValidEmail('astesiojosegmail.com')).to.be.false;
+            expect(utilsjs.string.isValidEmail('astesiojose@gmail')).to.be.false;
+            expect(utilsjs.string.isValidEmail('astesiojose@gmail.')).to.be.false;
+            expect(utilsjs.string.isValidEmail('@gmail.com')).to.be.false;
+            expect(utilsjs.string.isValidEmail('gmail.com')).to.be.false;
         });
 
         it('should return a boolean true for an email valid', () => {
-
+    
             expect(utilsjs.string.isValidEmail('astesiojose@gmail.com')).to.be.true;
         });
 
     });
     
-    describe('isEmpty', () => {
+    describe('isValidUserName', () => {
 
-        it('should return a boolean true for a string empty', () => {
-            
-            expect(utilsjs.string.isEmpty('')).to.be.true;
+        it('should accepts only aphanumercis [.0-9a-zA-Z_-]', () => {
+
+            expect(utilsjs.string.isValidUserName('000000')).to.be.true;
+            expect(utilsjs.string.isValidUserName('......')).to.be.true;
+            expect(utilsjs.string.isValidUserName('______')).to.be.true;
+            expect(utilsjs.string.isValidUserName('------')).to.be.true;
         });
-
-        it('should return a boolean false for an undefined', () => {
-            
-            expect(utilsjs.string.isEmpty()).to.be.false;
-        });
-
     });
     
-    describe('isNotEmpty', () => {
-
-        it('should return a boolean true for a some value string', () => {
-            
-            expect(utilsjs.string.isNotEmpty('some text')).to.be.true;
-        });
-
-        it('should return a boolean true for a string with one or more space empty', () => {
-            
-            expect(utilsjs.string.isNotEmpty(' ')).to.be.true;
-            expect(utilsjs.string.isNotEmpty('  ')).to.be.true;
-        });
-
-        it('should return a boolean true for an undefined', () => {
-            
-            expect(utilsjs.string.isNotEmpty(undefined)).to.be.true;
-        });
-
-        it('should return a boolean true for an NaN', () => {
-            
-            expect(utilsjs.string.isNotEmpty(NaN)).to.be.true;
-        });
+    describe('isValidPassword', () => {
+        
+        it('should accepts only aphanumercis [0-9a-zA-Z_-]', () => {
     
-        it('should return a boolean true for an number', () => {
-            
-            expect(utilsjs.string.isNotEmpty(0)).to.be.true;
+            expect(utilsjs.string.isValidPassword('04ae658')).to.be.true;
+            expect(utilsjs.string.isValidPassword('4a3dy8')).to.be.true;
         });
-
-        it('should return a boolean true for an any boolean', () => {
-            
-            expect(utilsjs.string.isNotEmpty(true)).to.be.true;
-            expect(utilsjs.string.isNotEmpty(false)).to.be.true;
-        });
-
     });
 
 });
