@@ -1,6 +1,6 @@
 {
   "name": "utilsjs",
-  "version": "2.2.0",
+  "version": "3.2.0",
   "description": "utils for you can use your libraries",
   "main": "src/index.js",
   "scripts": {
